@@ -4,6 +4,7 @@
     padding-bottom: 20px;
     margin: 0 auto;
     text-align: center;
+    
 }
 
 .user-avatar-circle {
@@ -11,6 +12,7 @@
     height: 120px;
     border-radius: 60px;
     line-height: 60px;
+    background: rebeccapurple;
 }
 
 .user-avatar-circle > * {
@@ -29,6 +31,7 @@
     .user-details {
         text-align: left;
         display: table;
+        
     }    
 
     .user-avatar, .user-summary {
@@ -63,6 +66,7 @@
 @media (max-width: 768px) {
     .user-summary .full-name {
         font-size: 24px;
+         
     }    
 }
 

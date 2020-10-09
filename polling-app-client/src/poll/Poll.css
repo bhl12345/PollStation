@@ -93,7 +93,7 @@
 
 .cv-choice-percentage {
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.75);
+    color: white;
 }
 
 .cv-choice-text {
@@ -103,6 +103,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    color: white;
 }
 
 .selected-choice-icon {
@@ -123,7 +124,7 @@
 }
 
 .cv-choice-percent-chart.winner {
-    background-color: #77C7F7;
+    background: rebeccapurple;
 }
 
 .poll-creator-info {

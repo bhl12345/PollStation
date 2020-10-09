@@ -7,6 +7,7 @@
     line-height: 64px;
     font-size: 21px;
     display: inline-block;
+    color: white;
   }
   
   .app-title a:hover {
@@ -19,23 +20,30 @@
     box-shadow: 0 2px 8px #f0f1f2;
     z-index: 10;
     padding: 0;
+    background: rebeccapurple;
   }
   
   .app-menu {
     float: right;
+    backgroundColor: rebeccapurple;
+     
+     
   }
   
   .app-menu > li {
     padding: 0 20px;
+    
   }
 
   .app-menu > li > a {
     padding: 0 20px;
     margin: 0 -20px;
+    
   }
 
   .app-menu > li > a > i {
     margin-right: 0 !important;
+     
   }
 
   .profile-dropdown-menu {
