@@ -1,7 +1,7 @@
 package com.poll.server.payload;
 
 /**
- * Created by rajeevkumarsingh on 19/08/17.
+ *  
  */
 public class JwtAuthenticationResponse {
     private String accessToken;

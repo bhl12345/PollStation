@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by rajeevkumarsingh on 01/08/17.
+ *  
  */
 
 @Entity
@@ -50,7 +50,6 @@ public class User extends DateAudit {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
-
     public User() {
 
     }
@@ -109,4 +108,6 @@ public class User extends DateAudit {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+ 
 }
