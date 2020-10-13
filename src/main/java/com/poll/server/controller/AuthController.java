@@ -100,14 +100,14 @@ public class AuthController {
 
       user.setRoles(Collections.singleton(userRole));
       
-      if(!userRoleRepository.findUserId(user.getId())) {
-         UserRoles userRoles = new UserRoles();
-        
-         userRoles.setUserId(user.getId());
-         userRoles.setRoleId(new Long(2));
-         userRoleRepository.save(userRoles);
-         
-      }
+//      if(!userRoleRepository.findUserId(user.getId())) {
+//         UserRoles userRoles = new UserRoles();
+//        
+//         userRoles.setUserId(user.getId());
+//         userRoles.setRoleId(new Long(2));
+//         userRoleRepository.save(userRoles);
+//         
+//      }
       
 
         URI location = ServletUriComponentsBuilder
