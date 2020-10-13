@@ -7,7 +7,7 @@ import javax.persistence.*;
  *  
  */
 @Entity
-@Table(name = "id", uniqueConstraints = {
+@Table(name = "roles", uniqueConstraints = {
         @UniqueConstraint(columnNames = {
             "id"
         }),
