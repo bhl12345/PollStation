@@ -7,7 +7,12 @@ import javax.persistence.*;
  *  
  */
 @Entity
-@Table(name = "roles")
+@Table(name = "id", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {
+            "id"
+        }),
+  
+})
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
