@@ -4,14 +4,12 @@ import com.poll.server.exception.AppException;
 import com.poll.server.model.Role;
 import com.poll.server.model.RoleName;
 import com.poll.server.model.User;
-import com.poll.server.model.UserRoles;
 import com.poll.server.payload.ApiResponse;
 import com.poll.server.payload.JwtAuthenticationResponse;
 import com.poll.server.payload.LoginRequest;
 import com.poll.server.payload.SignUpRequest;
 import com.poll.server.repository.RoleRepository;
 import com.poll.server.repository.UserRepository;
-import com.poll.server.repository.UserRoleRepository;
 import com.poll.server.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,13 +25,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
- 
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.Collections;
 
 /**
- * 
+ * Created by rajeevkumarsingh on 02/08/17.
  */
 @RestController
 @RequestMapping("/api/auth")
@@ -44,9 +41,6 @@ public class AuthController {
 
     @Autowired
     UserRepository userRepository;
-    
-    @Autowired
-    UserRoleRepository userRoleRepository;
 
     @Autowired
     RoleRepository roleRepository;
@@ -99,16 +93,6 @@ public class AuthController {
       .orElseThrow(() -> new AppException("User Role not set."));
 
       user.setRoles(Collections.singleton(userRole));
-      
-//      if(!userRoleRepository.findUserId(user.getId())) {
-//         UserRoles userRoles = new UserRoles();
-//        
-//         userRoles.setUserId(user.getId());
-//         userRoles.setRoleId(new Long(2));
-//         userRoleRepository.save(userRoles);
-//         
-//      }
-      
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentContextPath().path("/users/{username}")
