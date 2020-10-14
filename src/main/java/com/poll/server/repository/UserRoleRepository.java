@@ -12,7 +12,7 @@ import com.poll.server.model.UserRoles;
  
 @Repository
 public interface UserRoleRepository extends JpaRepository<UserRoles, Long> {
-	
+
 	 
 	 
 }
