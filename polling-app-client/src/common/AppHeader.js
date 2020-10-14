@@ -54,7 +54,7 @@ class AppHeader extends Component {
         return (
             <Header className="app-header">
             <div className="container">
-              <div className="app-title" >
+              <div    style={{ textAlign: "center"}} className="app-title" >
                 <Link to="/">Peasant Polls</Link>
               </div>
               <Menu

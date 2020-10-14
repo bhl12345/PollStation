@@ -1,13 +1,16 @@
 .app-title {
-    float: left;
+    
+   
+    float: center;
   }
   
   .app-title a {
     text-decoration: none;
-    line-height: 64px;
-    font-size: 21px;
+    line-height: 54px;
+    font-size: 60px;
     display: inline-block;
     color: white;
+     
   }
   
   .app-title a:hover {
@@ -15,12 +18,12 @@
   }
   
   .app-header {
-    position: fixed;
-    width: 100%;
-    box-shadow: 0 2px 8px #f0f1f2;
-    z-index: 10;
-    padding: 0;
-    background: rebeccapurple;
+    gridArea: header;
+    background: rebeccapurple;  
+    textAlign: center;
+    fontSize: 25px;
+    width: "100%";
+    textAlign: center;
   }
   
   .app-menu {
