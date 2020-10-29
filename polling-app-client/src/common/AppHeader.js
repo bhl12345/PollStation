@@ -60,9 +60,9 @@ class AppHeader extends Component {
         return (
             <div className="app-header">
             <div className="container">
-              <div    style={{ textAlign: "center"}} className="app-title" >
-                <Link style={{fontFamily: "Sofia",
-                textShadow:  "0  7px black, 0 0 5px black, 0 0 5px black, 0 0 5px black"}} to="/">Peasant Polls</Link>
+              <div  style={{textAlign: "center",fontFamily: "Sofia",
+                  textShadow:  "0  7px black, 0 0 5px black, 0 0 5px black, 0 0 5px black"}} className="app-title" >
+                <Link  to="/">Peasant Polls</Link>
               </div>
               <Menu
                 className="app-menu"

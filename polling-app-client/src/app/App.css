@@ -10,7 +10,7 @@ body {
 .header {
   grid-area: header;
   background: rebeccapurple;
-  padding: 30px;
+  padding: 70px;
   text-align: center;
   font-size: 35px;
 }

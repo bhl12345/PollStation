@@ -31,6 +31,9 @@ class App extends Component {
       isAuthenticated: false,
       isLoading: false
     }
+    this.handleLogout = this.handleLogout.bind(this);
+    this.loadCurrentUser = this.loadCurrentUser.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
 
     notification.config({
       placement: 'topRight',
@@ -92,14 +95,17 @@ class App extends Component {
     }
     return (
     		
-        <Layout className="app-container">
-          <AppHeader isAuthenticated={this.state.isAuthenticated} 
+        <div>
+        <div className="header">
+          <AppHeader  isAuthenticated={this.state.isAuthenticated} 
             currentUser={this.state.currentUser} 
             onLogout={this.handleLogout} />
-         
-          <Content className="app-content">
+         </div>
+          <Content className="gridContainer">
+          <div className="left">
           <Sidebar />
-            <div className="container">
+          </div>
+            <div className="middle" >
               <Switch>      
                 <Route exact path="/" 
                   render={(props) => <PollList isAuthenticated={this.state.isAuthenticated} 
@@ -116,7 +122,7 @@ class App extends Component {
               </Switch>
             </div>
           </Content>
-        </Layout>
+        </div>
     );
   }
 }
