@@ -43,19 +43,26 @@ class AppHeader extends Component {
         } else {
           menuItems = [
             <Menu.Item key="/login">
-              <Link to="/login">Login</Link>
+              <Link style={{    
+            	    background: "rebeccapurple",   
+            	    color: "white" 
+            	    }} to="/login">Login</Link>
             </Menu.Item>,
             <Menu.Item key="/signup">
-              <Link to="/signup">Signup</Link>
+              <Link style={{    
+          	    background: "rebeccapurple",   
+        	    color: "white" 
+        	    }} to="/signup">Signup</Link>
             </Menu.Item>                  
           ];
         }
 
         return (
-            <Header className="app-header">
+            <div className="app-header">
             <div className="container">
               <div    style={{ textAlign: "center"}} className="app-title" >
-                <Link to="/">Peasant Polls</Link>
+                <Link style={{fontFamily: "Sofia",
+                textShadow:  "0  7px black, 0 0 5px black, 0 0 5px black, 0 0 5px black"}} to="/">Peasant Polls</Link>
               </div>
               <Menu
                 className="app-menu"
@@ -65,7 +72,7 @@ class AppHeader extends Component {
                   {menuItems}
               </Menu>
             </div>
-          </Header>
+          </div>
         );
     }
 }

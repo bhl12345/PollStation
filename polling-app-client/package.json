@@ -23,6 +23,11 @@
     "babel-plugin-import": "^1.6.5",
     "react-app-rewire-less": "^2.1.0",
     "react-app-rewired": "^1.6.2"
+  },
+  "proxy": {
+    "/api": {
+      "target": "https://polling-peasant.herokuapp.com/",
+      "ws": true
+    }
   }
-  
 }

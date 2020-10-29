@@ -136,7 +136,7 @@ class Signup extends Component {
                                 name="password" 
                                 type="password"
                                 autoComplete="off"
-                                placeholder="A password between 6 to 20 characters" 
+                                placeholder="6 to 20 alphanumeric characters only" 
                                 value={this.state.password.value} 
                                 onChange={(event) => this.handleInputChange(event, this.validatePassword)} />    
                         </FormItem>

@@ -1,0 +1,19 @@
+.left {
+  grid-area: left;
+  display: grid;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  position:auto;
+  
+}
+
+.ul{
+  height: auto;
+  width: 25%;
+  position:left;
+}
+
+a{
+	 color:rebeccapurple;;
+}

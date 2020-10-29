@@ -15,6 +15,7 @@ import Login from '../user/login/Login';
 import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
 import AppHeader from '../common/AppHeader';
+import Sidebar from '../common/sidebar';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
 import PrivateRoute from '../common/PrivateRoute';
@@ -30,9 +31,6 @@ class App extends Component {
       isAuthenticated: false,
       isLoading: false
     }
-    this.handleLogout = this.handleLogout.bind(this);
-    this.loadCurrentUser = this.loadCurrentUser.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
 
     notification.config({
       placement: 'topRight',
@@ -93,12 +91,14 @@ class App extends Component {
       return <LoadingIndicator />
     }
     return (
+    		
         <Layout className="app-container">
           <AppHeader isAuthenticated={this.state.isAuthenticated} 
             currentUser={this.state.currentUser} 
             onLogout={this.handleLogout} />
-
+         
           <Content className="app-content">
+          <Sidebar />
             <div className="container">
               <Switch>      
                 <Route exact path="/" 
