@@ -19,6 +19,8 @@ import Sidebar from '../common/sidebar';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
 import PrivateRoute from '../common/PrivateRoute';
+import FactCheckfeed from '../common/FactCheckfeed';
+import LifeHack from '../common/LifeHack';
 
 import { Layout, notification } from 'antd';
 const { Content } = Layout;
@@ -120,6 +122,11 @@ class App extends Component {
                 <PrivateRoute authenticated={this.state.isAuthenticated} path="/poll/new" component={NewPoll} handleLogout={this.handleLogout}></PrivateRoute>
                 <Route component={NotFound}></Route>
               </Switch>
+            </div>
+            <div className="right">
+            <LifeHack/>
+            <br/>
+            <FactCheckfeed/>
             </div>
           </Content>
         </div>
